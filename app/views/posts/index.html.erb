@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+<% end %>
+
+<div class="text-center" id="paginator">
+<%= link_to_next_page @posts, 'Next Page >' %>
+<%= link_to_previous_page @posts, '< Previous Page' %>
+<%= page_entries_info @posts %>
+<div>

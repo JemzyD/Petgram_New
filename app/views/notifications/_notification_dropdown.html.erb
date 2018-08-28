@@ -1,0 +1,16 @@
+<div class="dropdown notification-dropdown">
+    <button class="btn btn-default dropdown-toggle" type='button', id='dropdownMenu1', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true'>
+        <%= current_user.notifications.where(read:nil).count %>
+        <span class="glyphicon glyphicon-flag"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby='dropdownMenu1'>
+        <li class="dropdown-header text-center">Notifications</li>  
+            <%= render current_user.notifications.where(read:nil).last(5).reverse %>
+        <li class="divider" role="separator">
+            <li class="text-center">
+                <%= link_to "New Post", new_post_path %>
+            </li>
+        </li>
+    </ul>
+    
+</div>

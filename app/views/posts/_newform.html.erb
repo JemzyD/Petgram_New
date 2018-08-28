@@ -1,0 +1,46 @@
+<div class="newpostcontainter">
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="posts-wrapper">
+      <div class="post">
+        <div class="post-body">
+          <div class="image-wrap">
+
+              <div class="row">
+                <div class="col-md-12 text-center">
+                </div>
+              </div>
+            
+            <div class="container-fluid">
+              <div class="form-group text-center">
+              <h4>Upload Image </h4>
+                <%= form.file_field :image %>
+              </div>
+
+              <div class="form-group text-center">
+                <h4>Caption:</h4>
+                <%= form.text_area :caption %>
+              </div>
+
+              <div class="actions">
+                <%= form.submit class: 'btn-success btn-block' %>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

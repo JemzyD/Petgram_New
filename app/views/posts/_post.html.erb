@@ -1,0 +1,52 @@
+  <div class="container">
+    <div class="posts-wrapper row">
+      <div class="post">
+      <div class="post-head">
+      <div class="user-name">
+        <%= link_to post.user.user_name, profile_path(post.user.user_name) %>
+      </div>
+      <div class="time-ago">
+        <%= time_ago_in_words post.created_at %>
+      </div>
+      </div> 
+      <div class="image center-block">
+        <a href="<%= post_path post%>" class="summary">
+        <%= image_tag(post.image.thumbnail.url, :class => "img-responsive", :size => "500x500") %>
+      </a>
+      </div>
+
+      <div class="post-bottom">
+        <%= render 'posts/likes', post: post %>
+      <div class="caption">
+        <div class="caption-content">
+          <div class="user-name">
+          <%= link_to post.user.user_name, profile_path(post.user.user_name) %>
+        </div>
+          <%= post.caption %>
+        </div>  
+      </div>
+      <div class="comments" id="comments_<%= post.id %>">
+        <% if post.comments %>
+        <%= render post.comments, post: post %>
+        <% end %>
+      </div>     
+      </div>
+
+      <div class="comment-like-form row">
+      <div class="like-button col-sm-1">
+        <%= liked_post post %>
+        <%# <%= link_to '', like_post_path(post.id), remote: true, id: "like_#{post.id}", class: "like glyphicon #{liked_post post}" %>
+      </div>
+      <div class="comment-form col-sm-11">
+        <%= form_for [post, post.comments.build] do |form| %>
+        <%= form.text_field :content, placeholder: 'Add a comment....' %>
+        <%= form.submit class: 'btn-primary .btn-sm' %>
+        <% end %>
+      </div>
+      <%# <%= link_to 'Show', post %>
+      <%# <%= link_to 'Edit', edit_post_path(post) %>
+      <%# <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      </div>
+    </div>
+  </div>

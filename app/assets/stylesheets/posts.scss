@@ -1,0 +1,309 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  }
+
+
+  body {
+    background-color: #ffebd5;
+    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    // background-image: url("background.jpg");
+    // background-position: 0 50px;
+    // background-repeat: repeat;
+    // background-size: cover;
+  }
+
+  .logincontainer h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .logincontainer {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    width: auto;
+    // background-position: 0 50px;
+    // height: 100%;
+  }
+
+  .signupcontainer h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .signupcontainer {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    width: auto;
+  }
+
+    .editcontainer h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .editcontainer h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .editcontainer {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    width: auto;
+  }
+  
+
+  /* ## NAVBAR CUSTOMISATIONS ## */
+  
+
+  .navbar-brand {
+    a {
+      color: #125688;
+    }
+  }
+  
+  .navbar-default {
+    background-color: #A9A9A9;
+    height: 54px;
+    .navbar-nav li a {
+      color: #125688;
+      font-size: 16px;
+    }
+  }
+  
+  .navbar-container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .newpostcontainer h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /* ## POST CUSTOMISATIONS ## */
+  
+  .posts-wrapper {
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 642px;
+    width: 100%;
+  }
+  
+  .post {
+    background-color: #fff;
+    border-color: #edeeee;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    margin-bottom: 60px;
+    .post-head {
+      flex-direction: row;
+      height: 64px;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 24px;
+      color: #125688;
+      font-size: 15px;
+      line-height: 18px;
+      .user-name, .time-ago {
+        display: inline;
+      }
+      .user-name {
+        font-weight: 500;
+      }
+      .time-ago {
+        color: #A5A7AA;
+        float: right;
+      }
+    }
+    .image {
+      border-bottom: 2px solid #428bca;
+      border-top: 2px solid #428bca;
+    }
+  }
+
+  .image .img-responsive {
+    margin: 10px auto;
+  }
+  
+  .post-bottom {
+    .user-name, .comment-content {
+      display: inline;
+    }
+    .caption {
+      margin-bottom: 7px;
+    }
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+      color: #125688;
+      font-size: 15px;
+    }
+    .user-name, .caption-content {
+      display: inline;
+    }
+    #comment {
+      margin-top: 7px;
+      .user-name {
+        font-weight: 500;
+        margin-right: 0.3em;
+      }
+      .delete-comment {
+        float: right;
+        color: #515151;
+      }
+    }
+    margin-bottom: 7px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  .comment_content {
+    font-size: 15px;
+    line-height: 18px;
+    border: medium none;
+    width: 100%;
+    color: #4B4F54;
+  }
+  
+  .comment-like-form {
+    padding-top: 24px;
+    margin-top: 13px;
+    margin-left: 24px;
+    margin-right: 24px;
+    min-height: 68px;
+    align-items: center;
+    border-top: 1px solid #EEEFEF;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .notification-dropdown {
+    margin-top: 10px;
+    button {
+      border: none;
+    }
+  }
+  
+  /* ## Wrapper and styling for the new and edit views ## */
+  
+  .form-wrapper {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #eeefef;
+    border-radius: 3px;
+  }
+  
+  .edit-links {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #image-preview {
+    margin: 0px auto;
+  }
+  
+  #post_image {
+    padding: 1em;
+    margin: 0px auto;
+  }
+
+  #paginator {
+    color: #4090DB;
+    height: 120px;
+    width: 120px;
+    margin: 60px auto 40px;
+    position: relative;
+
+  }
+
+  #user_avatar {
+    margin: 20px auto;
+  }
+
+  .profile-header {
+    padding: 20px 80px 20px 0;
+  }
+  
+  #avatar-image {
+    margin-left: 60px;
+    height: 152px;
+    width: 152px;
+    border-radius: 50%;
+    border:5px solid #FF0080;
+  }
+  
+  .user-name-and-follow {
+    display: inline;
+  }
+  
+  .profile-user-name {
+    display: inline;
+  }
+  
+  .edit-button {
+    border-color: #007bff;
+    color: #007bff;
+    margin-left: 20px;
+  }
+  
+  .profile-bio {
+    margin-top: 20px;
+    border: 1px solid #007bff;
+  }
+
+  .likes {
+    margin-top: 20px;
+    margin-bottom: 7px;
+  }
+
+  .like {
+    text-decoration: none;
+    color: red;
+  }
+  
+  .like-button a:hover, a:focus {
+    text-decoration: none;
+    color: red;
+  }
+
+  .notification-index-list {
+    margin-top: 5em;
+    list-style: none;
+    li {
+      margin-top: 1em;
+      background-color: white;
+      padding: 1em;
+    }
+  }
